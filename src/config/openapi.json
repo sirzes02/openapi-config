@@ -26,6 +26,25 @@
             "type": "number"
           }
         }
+      },
+      "Health": {
+        "type": "object",
+        "required": ["status", "uptimename", "timestamp", "environment"],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "uptime": {
+            "type": "number"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date"
+          },
+          "environment": {
+            "type": "string"
+          }
+        }
       }
     }
   }

@@ -15,6 +15,13 @@ export interface components {
             email: string;
             age?: number;
         };
+        Health: {
+            status: string;
+            uptime?: number;
+            /** Format: date */
+            timestamp: string;
+            environment: string;
+        };
     };
     responses: never;
     parameters: never;
