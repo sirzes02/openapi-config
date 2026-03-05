@@ -1,5 +1,3 @@
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-}
+import type { components } from "../generated/api-types.js";
+
+export type User = components["schemas"]["User"]
