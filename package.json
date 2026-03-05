@@ -44,6 +44,9 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
   },
+  "engines": {
+    "node": ">=24"
+  },
   "lint-staged": {
     "*.{js,ts}": [
       "eslint --fix",

@@ -30,7 +30,11 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 # Editor/OS files
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
 .husky/_/
