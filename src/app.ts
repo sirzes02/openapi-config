@@ -9,6 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
-app.use('/health', healthRoutes);
+app.use('/api/health', healthRoutes);
 
 export default app;
