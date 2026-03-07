@@ -1,4 +1,4 @@
-import type { Health } from '../models/health.model.js';
+import type { Health } from '../model/health.model.js';
 
 export const getHealth = (): Health => {
   return {

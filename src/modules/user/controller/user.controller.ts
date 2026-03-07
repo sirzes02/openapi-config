@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import * as userService from '../services/user.service.js';
+import * as userService from '../service/user.service.js';
 
 export const getUsers = (_: Request, res: Response) => {
   res.json(userService.getUsers());
