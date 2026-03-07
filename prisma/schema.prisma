@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Barbershop {
+  id        Int      @id @default(autoincrement())
+  name      String
+  address   String?
+  phone     String?
+  createdAt DateTime @default(now())
+  users     User[]
+}
+
+model User {
+  id           Int        @id @default(autoincrement())
+  name         String
+  email        String?    @unique
+  phone        String     @unique
+  role         UserRole   @default(CUSTOMER)
+  createdAt    DateTime   @default(now())
+  barbershopId Int
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+
+  @@index([barbershopId], map: "User_barbershopId_fkey")
+}
+
+enum UserRole {
+  ADMIN
+  BARBER
+  CUSTOMER
+}

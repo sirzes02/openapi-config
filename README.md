@@ -36,21 +36,13 @@ Husky hooks are installed automatically via the `prepare` script.
 
 Run development server:
 
-```bash
-npm run dev
-```
-
-Build project:
+Run the docker files and then:
 
 ```bash
-npm run build
+docker compose exec api npx prisma db push
 ```
 
-Run compiled version:
-
-```bash
-npm start
-```
+This is going to join prisma with your database
 
 ---
 
