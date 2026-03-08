@@ -1,6 +1,4 @@
-import type { Health } from '../model/health.model.js';
-
-export const getHealth = (): Health => {
+export const getHealth = () => {
   return {
     status: 'ok',
     uptime: process.uptime(),
