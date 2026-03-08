@@ -7,7 +7,6 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "generate:types": "openapi-typescript src/config/openapi.json -o src/generated/api-types.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
