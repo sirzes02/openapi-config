@@ -3,7 +3,8 @@ import * as barberShopController from '../modules/barberShop/barberShop.controll
 
 const router = Router();
 
-router.get('/', barberShopController.getUsers);
-router.post('/', barberShopController.createUser);
+router.get('/', barberShopController.getBarberShops);
+router.post('/', barberShopController.createBarberShop);
+router.delete('/', barberShopController.deleteBarberShop);
 
 export default router;

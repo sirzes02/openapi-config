@@ -13,6 +13,7 @@ model Barbershop {
   phone     String?
   createdAt DateTime @default(now())
   users     User[]
+  isActive  Boolean  @default(true)
 }
 
 model User {
