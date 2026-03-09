@@ -1,4 +1,4 @@
-export type BarberShopId = number;
+export type BarberShopId = string;
 
 export interface CreateBarbershopDTO {
   name: string;

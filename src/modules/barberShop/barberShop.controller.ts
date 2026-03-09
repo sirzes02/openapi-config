@@ -18,7 +18,8 @@ export const createBarberShop = async (req: Request, res: Response) => {
 };
 
 export const deleteBarberShop = async (req: Request, res: Response) => {
-  const user = await userService.deleteBarberShop(req.body.id);
+  const { id } = req.params;
+  const user = await userService.deleteBarberShop(id as string);
 
   res.status(201).json(user);
 };

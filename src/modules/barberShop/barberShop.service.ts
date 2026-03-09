@@ -15,8 +15,14 @@ export const createBarberShop = async (
 };
 
 export const deleteBarberShop = async (id: BarberShopId): Promise<Barbershop> => {
+  const idConverted = Number(id);
+
+  if (isNaN(idConverted)) {
+    throw 'Invalid Id';
+  }
+
   const newBarbershop = await prisma.barbershop.update({
-    where: { id: id },
+    where: { id: idConverted },
     data: { isActive: false },
   });
   return newBarbershop;
