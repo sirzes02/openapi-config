@@ -2,11 +2,15 @@ import type { Request, Response } from 'express';
 import * as userService from './barberShop.service.js';
 import type { CreateBarbershopDTO } from './dto/generalDtos.js';
 
-export const getBarberShops = async (_: Request, res: Response) => {
+export const getBarberShops = async (req: Request, res: Response) => {
+  req.log.info('Entering getBarberShops controller');
+
   res.json(await userService.getBarberShops());
 };
 
 export const createBarberShop = async (req: Request, res: Response) => {
+  req.log.info('Entering createBarberShop controller');
+
   const dto: CreateBarbershopDTO = {
     name: req.body.name,
     address: req.body.address,
@@ -18,6 +22,8 @@ export const createBarberShop = async (req: Request, res: Response) => {
 };
 
 export const deleteBarberShop = async (req: Request, res: Response) => {
+  req.log.info('Entering deleteBarberShop controller');
+
   const { id } = req.params;
   const user = await userService.deleteBarberShop(id as string);
 

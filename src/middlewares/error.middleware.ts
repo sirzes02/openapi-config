@@ -2,11 +2,14 @@ import type { ErrorRequestHandler, NextFunction, Request, Response } from 'expre
 
 export const errorHandler: ErrorRequestHandler = (
   err: Error,
-  _req: Request,
+  req: Request,
   res: Response,
   _next: NextFunction,
 ) => {
-  console.error(err);
+  req.log.error({
+    message: err.message,
+    stack: err.stack,
+  });
 
   res.status(500).send({
     errors: [{ message: err.message }],

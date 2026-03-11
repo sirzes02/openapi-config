@@ -5,11 +5,16 @@ import barberShop from './routes/barberShop.routes.js';
 import healthRoutes from './routes/health.route.js';
 import { swaggerSpec } from './config/swagger.js';
 import { errorHandler } from './middlewares/error.middleware.js';
+import compression from 'compression';
+import { pinoHttp } from 'pino-http';
+import { logger } from './config/logger.js';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(compression());
+app.use(pinoHttp({ logger }));
 
 app.use(errorHandler);
 

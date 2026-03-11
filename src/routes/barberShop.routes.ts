@@ -5,7 +5,7 @@ const router = Router();
 
 /**
  * @openapi
- * /api/barbershop:
+ * /api/barber_shops:
  *   get:
  *     summary: Get all barbershops
  *     tags:
@@ -18,7 +18,7 @@ router.get('/', barberShopController.getBarberShops);
 
 /**
  * @openapi
- * /api/barbershop:
+ * /api/barber_shops:
  *   post:
  *     summary: Create barbershop
  *     tags:
@@ -49,7 +49,7 @@ router.post('/', barberShopController.createBarberShop);
 
 /**
  * @openapi
- * /api/barbershop/{id}:
+ * /api/barber_shops/{id}:
  *   delete:
  *     summary: Delete barbershop
  *     tags:
